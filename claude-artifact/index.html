@@ -93,6 +93,13 @@
 .lx-prior{margin:0;padding-left:5.2rem;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);font-variant-numeric:tabular-nums}
 .lx-tip{position:absolute;z-index:5;pointer-events:none;white-space:pre-line;max-width:16rem;background:var(--cds-surface-popover);border:1px solid var(--cds-border);border-radius:var(--cds-radius);box-shadow:var(--cds-shadow-popover);padding:var(--cds-pad-xs) var(--cds-pad-sm);font-size:var(--cds-font-size-caption);line-height:1.4}
 .lx-tip[hidden]{display:none}
+.lx-tip-rich{white-space:normal;width:max-content;max-width:min(24rem,calc(100% - 1rem))}
+.lx-tip-h{font-weight:var(--cds-font-weight-medium)}
+.lx-tip-l{list-style:none;margin:var(--cds-gap-xs) 0 0;padding:0;display:flex;flex-direction:column;gap:var(--cds-gap-xs)}
+.lx-tip-l li{display:flex;gap:var(--cds-gap-sm);align-items:baseline}
+.lx-tip-l .lx-dot{margin-right:0;flex:none}
+.lx-tip-n{flex:none;min-width:1.4rem;color:var(--color-fg-muted);font-variant-numeric:tabular-nums}
+.lx-tip-f{margin-top:var(--cds-gap-xs);color:var(--color-fg-muted)}
 .lx-fail{display:flex;align-items:center;justify-content:center;gap:.4rem;min-height:4rem;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
 .lx-fail i{width:.375rem;height:.375rem;border-radius:50%;background:var(--color-bad)}
 </style>
@@ -135,7 +142,7 @@
   <section id="by-topic" class="lx-card">
     <h2 class="lx-h">Progress by topic</h2>
     <p class="lx-sub">Number of goals per topic, by status. Select a topic or theme to filter the table below.</p>
-    <div id="lx-topics" class="lx-chart dash-skeleton" data-source="topic_status"></div>
+    <div id="lx-topics" class="lx-chart dash-skeleton" data-source="topic_status goals"></div>
     <div class="lx-legend">
       <span class="lx-lg lx-d-green"><i class="lx-dot"></i>Completed / major progress</span>
       <span class="lx-lg lx-d-yellow"><i class="lx-dot"></i>Some progress</span>
@@ -310,9 +317,8 @@ function drawTopics() {
     hg.on('click', () => dash.setParams({theme: t, topic: null}));
     y += headH;
     rows.filter((r) => r.theme === t).forEach((r) => {
-      const tipLines = [r.topic].concat(STATUS.filter((s) => r[s.key] > 0).map((s) => s.label + ': ' + FMT.n(r[s.key])));
       const g = svg.append('g').attr('class', 'lx-row').style('cursor', 'pointer').style('opacity', dim(r) ? 0.4 : 1)
-        .attr('data-tip', tipLines.join('\n'));
+        .attr('data-topic', r.topic);
       g.append('rect').attr('class', 'lx-hit').attr('x', 0).attr('y', y).attr('width', W).attr('height', rowH);
       g.append('text').attr('x', 8).attr('y', y + rowH / 2 + 4).text(r.topic)
         .style('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)');
@@ -472,15 +478,54 @@ root.querySelector('.lx-table thead').addEventListener('click', (e) => {
   drawTable();
 });
 
+const topicGoals = (topic) => {
+  const d = dash.data('goals');
+  return d.status === 'ok' ? d.data.filter((g) => g.topic === topic) : [];
+};
+function clip(s, n) {
+  if (s.length <= n) return s;
+  const cut = s.slice(0, n);
+  return cut.slice(0, Math.max(cut.lastIndexOf(' '), n - 20)) + '…';
+}
+function fillTopicTip(topic) {
+  if (tip.dataset.k === topic) return;
+  tip.dataset.k = topic;
+  tip.classList.add('lx-tip-rich');
+  const head = el('div', 'lx-tip-h');
+  head.textContent = topic;
+  const list = el('ul', 'lx-tip-l');
+  topicGoals(topic).forEach((g) => {
+    const li = el('li');
+    const dot = el('i', 'lx-dot');
+    dot.style.background = STATUS.find((s) => s.key === g.status).color;
+    const n = el('span', 'lx-tip-n');
+    n.textContent = g.id;
+    const txt = el('span');
+    txt.textContent = clip(g.promise, 90);
+    li.append(dot, n, txt);
+    list.append(li);
+  });
+  const foot = el('div', 'lx-tip-f');
+  foot.textContent = 'Select to filter the table below';
+  tip.replaceChildren(head, list, foot);
+}
 root.addEventListener('mousemove', (e) => {
-  const t = e.target.closest('[data-tip]');
+  const t = e.target.closest('[data-tip], [data-topic]');
   if (!t) { tip.hidden = true; return; }
-  tip.textContent = t.getAttribute('data-tip');
+  if (t.dataset.topic) fillTopicTip(t.dataset.topic);
+  else {
+    tip.dataset.k = '';
+    tip.classList.remove('lx-tip-rich');
+    tip.textContent = t.getAttribute('data-tip');
+  }
   tip.hidden = false;
   const rb = root.getBoundingClientRect();
+  const h = tip.offsetHeight;
   const x = Math.max(0, Math.min(e.clientX - rb.left + 12, rb.width - tip.offsetWidth));
+  let y = e.clientY - rb.top + 16;
+  if (e.clientY + 16 + h > window.innerHeight && e.clientY - h - 12 > 0) y = e.clientY - rb.top - h - 12;
   tip.style.left = x + 'px';
-  tip.style.top = (e.clientY - rb.top + 16) + 'px';
+  tip.style.top = y + 'px';
 });
 root.addEventListener('mouseleave', () => { tip.hidden = true; });
 
