@@ -1,0 +1,42 @@
+[
+ {
+  "priority": "Working to create a community where everyone belongs and has the opportunity to connect and contribute",
+  "residents_total": 71,
+  "residents_strong": 24,
+  "residents_prior": null,
+  "business_total": 79,
+  "business_strong": 27
+ },
+ {
+  "priority": "Working to ensure infrastructure are resilient to meet the community's needs today and into the future",
+  "residents_total": 63,
+  "residents_strong": 25,
+  "residents_prior": null,
+  "business_total": 61,
+  "business_strong": 23
+ },
+ {
+  "priority": "Working to make streets safer for the movement of people on foot, cycle, and transit",
+  "residents_total": 62,
+  "residents_strong": 26,
+  "residents_prior": 55,
+  "business_total": 61,
+  "business_strong": 25
+ },
+ {
+  "priority": "Working to maintain a local, nimble, resilient, and competitive economy that serves our local community",
+  "residents_total": 58,
+  "residents_strong": 18,
+  "residents_prior": null,
+  "business_total": 54,
+  "business_strong": 16
+ },
+ {
+  "priority": "Working to ensure New Westminster has all types of homes needed by people today and tomorrow, prioritizing homes for those with the greatest need",
+  "residents_total": 51,
+  "residents_strong": 18,
+  "residents_prior": 47,
+  "business_total": 57,
+  "business_strong": 17
+ }
+]

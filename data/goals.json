@@ -1,0 +1,542 @@
+[
+ {
+  "id": 1,
+  "theme": "Activate",
+  "topic": "Arts",
+  "promise": "Support the development of a community-based arts hub at Massey Theatre to assure the partnership supports local artists and the entire community",
+  "outcome": "Investing $34 Million in MT. Working on new service delivery agreement with MTS, prioritizing community space.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 2,
+  "theme": "Activate",
+  "topic": "Arts",
+  "promise": "Increase the public use of public spaces, from Hyack Square to Belmont Plaza, for performance and interactive arts.",
+  "outcome": "Built new community space at Belmont Plaza and performance space in new Pier Park West. Increased support for programming to activate Arts New West, the BIAs and others, including markets in Hyack Square",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 3,
+  "theme": "Activate",
+  "topic": "Arts",
+  "promise": "Work with the community to create a renewed vision for the Anvil Centre, better balancing performance and community gathering, as part of a downtown and tourism strategy.",
+  "outcome": "Anvil Centre is now more programmed with more community art space, new Library services, and the Community Living Room programming.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 4,
+  "theme": "Activate",
+  "topic": "Arts",
+  "promise": "Build a Partnership with PAL Canada community to assure seniors have access to performance opportunities",
+  "outcome": "Preliminary conversations have begun, interest exists, resources required",
+  "status_label": "Some progress",
+  "status": "yellow"
+ },
+ {
+  "id": 5,
+  "theme": "Activate",
+  "topic": "Arts",
+  "promise": "Include another significant public art piece in the rebuild of Pier Park",
+  "outcome": "Pier Park West includes EBB and FLOW, an original piece by Musqueam artists Brent Sparrow and Kelly Cannell. Pier Park East expansion pending.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 6,
+  "theme": "Activate",
+  "topic": "Commercial Streets",
+  "promise": "Implement a new retail strategy that addresses the needs of small businesses in the 21st century",
+  "outcome": "Retail Strategy Adopted.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 7,
+  "theme": "Activate",
+  "topic": "Commercial Streets",
+  "promise": "Support Columbia Street businesses and residents by taking a proactive approach to addressing vacant and underutilized building sites.",
+  "outcome": "Have connected with owners, have taken aggressive action (remedial order) on one property, have advocated to senior government for stronger tools to address issue.",
+  "status_label": "Some progress",
+  "status": "yellow"
+ },
+ {
+  "id": 8,
+  "theme": "Activate",
+  "topic": "Commercial Streets",
+  "promise": "Support small business retention, with an emphasis on 12th Street and under-supported commercial areas, through proactive engagement and inclusion",
+  "outcome": "Have supported Chamber, BIAs and new Sapperton Business Collective. Have increased grants and supported renewed 12th Street festival. Engaged businesses in new Retail Strategy development and new Patio support program.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 9,
+  "theme": "Activate",
+  "topic": "Commercial Streets",
+  "promise": "Explore the impacts of including ground-level retail space as amenity contributions that can incubate smaller locally-owned business startups.",
+  "outcome": "Two recent large developments included smaller CRU units, and supported strategy to reduce lease and fit out cost to support smaller local businesses. This a result of successful negotiations with developers by retail strategy.",
+  "status_label": "Some progress",
+  "status": "yellow"
+ },
+ {
+  "id": 10,
+  "theme": "Activate",
+  "topic": "Public spaces",
+  "promise": "Increase accessible green public spaces throughout the City. Set measurable goals that assure every resident has access to shade natural spaces.",
+  "outcome": "Have secured new plaza areas with new development, have more than a doubled funds going to in Parks Reserve Fund from recent development, People Parks and Play plan includes measurable parks space targets. Have opened 2 acre expansion of Pier Park, purchased 3.7 Acres in lower 12th for future park or recreation space.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 11,
+  "theme": "Activate",
+  "topic": "Public spaces",
+  "promise": "With ongoing changes to the Riverfront, work with business community and event organizers to maximize the potential of the Quay as a tourist destination and to serve the local community.",
+  "outcome": "Working with Tourism New West to emphasize our Riverfront location, new MOU with FRDC; Preliminary approvals of a new destination hotel in the Downtown",
+  "status_label": "Some progress",
+  "status": "yellow"
+ },
+ {
+  "id": 12,
+  "theme": "Activate",
+  "topic": "Public spaces",
+  "promise": "Create programming and events that represent and celebrate the diversity of our community.",
+  "outcome": "Increased funding and supports for organizations in the community that bring these events, have also staffed up Events team, and the Fired up for Football program demonstrated commitment and ability to succeed.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 13,
+  "theme": "Activate",
+  "topic": "Public spaces",
+  "promise": "Commit to well-maintained and inviting Public Spaces, build a community ownership model that brings residents and businesses together.",
+  "outcome": "Have lead community conversations formally on master planning new parks and places, and have supported organization in the community in programming them",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 14,
+  "theme": "Activate",
+  "topic": "Partnerships",
+  "promise": "Identify and support additional partners in the community that make our community safer, more livable, more fun.",
+  "outcome": "Work to support and better fund diversity of organizations providing events and activity in the community",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 15,
+  "theme": "Activate",
+  "topic": "Partnerships",
+  "promise": "Work with Sports communities to identify gaps in local sports and recreation facilities and develop solutions that work for users, with an emphasis on updating outdoor sports facilities.",
+  "outcome": "Community sports organizations deeply involved in the People, Parks and Play master plan process, and engaged discussions about next phase of recreation investment in the City.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 16,
+  "theme": "Activate",
+  "topic": "Partnerships",
+  "promise": "Celebrate and embrace the innovation of our community. We will find creative ways too address the challenges of today, pull best practices from other communities and engage the community while doing it.",
+  "outcome": "Community Advisory Assembly model entering third year of successful operation.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 17,
+  "theme": "Activate",
+  "topic": "Partnerships",
+  "promise": "Invite partnerships that empower the community groups to do their best work while the City provides support only where needed. Use the MTS model as an example.",
+  "outcome": "Increased grants to many arts, culture, social service and sports organizations, and staffed up organizational support to make it easier for orgs to access City services, supports and funds.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 18,
+  "theme": "Nurture",
+  "topic": "Housing",
+  "promise": "Continue to protect the City's existing rental supply to enhance housing security, while incentivizing building resiliency into the existing building stock to prepare for climate change and emergency response",
+  "outcome": "Province-leading policy to protect renters, to protect lower-cost rental stock while increasing purpose built rental supply.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 19,
+  "theme": "Nurture",
+  "topic": "Housing",
+  "promise": "Increase the number of homes everyone can afford that are required in new multi-family developments in transit-focused areas",
+  "outcome": "Updated our inclusionary zoning policy, pre-zoned TOD areas for non-profit affordable housing, approved all affordable and supportive housing put in front of us, and lobbied the province for more.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 20,
+  "theme": "Nurture",
+  "topic": "Housing",
+  "promise": "Develop a Community Land Trust model to drive affordable housing development and more strategic public land use",
+  "outcome": "Work in progress. Are updating the City's land holding, have committed to land acquisition through development funding to increase availability for affordable housing",
+  "status_label": "Some progress",
+  "status": "yellow"
+ },
+ {
+  "id": 21,
+  "theme": "Nurture",
+  "topic": "Housing",
+  "promise": "Partner with non-profits and senior governments guided by the principles of housing first and housing for all. Act on the City's Housing Needs Report to drive investment towards underserved communities and populations.",
+  "outcome": "Have met our Housing Targets for the first year, and have approved new affordable, supportive and transitional housing projects in the City. Though province is “re-pacing” some funding here, have been successful at getting projects on the ground in New West.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 22,
+  "theme": "Nurture",
+  "topic": "Housing",
+  "promise": "Update and streamline permitting processes to accelerate the construction of missing middle housing for young working families who face barriers to the housing market",
+  "outcome": "Have integrated missing middle townhouse forms and multiplex forms into more neighbourhoods through our made-in-New West approach for new housing regulations.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 23,
+  "theme": "Nurture",
+  "topic": "Environment",
+  "promise": "Implement the region-leading Community Energy Plan with hard targets for emissions reduction. Integrate Climate Action into all city work.",
+  "outcome": "Province-leading and award-winning work on Climate Action, from our innovative Decision-making framework and Climate Action Reserve Fund to our Adaptation plans and public dashboards. We also lead the province in local government advocacy on climate.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 24,
+  "theme": "Nurture",
+  "topic": "Environment",
+  "promise": "Plant new trees in parks and boulevards throughout the city, enhance green spaces for passive use, and support the Ecological Network approach to natural spaces.",
+  "outcome": "The Urban Forest Management Strategy is province-leading, and largely funded by senior governments due to advocacy and action by the city",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 25,
+  "theme": "Nurture",
+  "topic": "Environment",
+  "promise": "Update Emergency Planning with a focus on building resilience in the face of emergent climate-driven risks like the heat dome and increased storm intensity.",
+  "outcome": "New Climate Change Adaptation and Resilience Plan approved and implemented by the City. Province-leading work to address dangers of the Heat Dome.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 26,
+  "theme": "Nurture",
+  "topic": "Environment",
+  "promise": "Engage the community on a new approach to recycling that emphasizes customer service and life cycle impacts of waste",
+  "outcome": "New Solid Waste Strategy was approved 2025. A work in progress to expand the community discussion of recycling and circular economy models for water management.",
+  "status_label": "Some progress",
+  "status": "yellow"
+ },
+ {
+  "id": 27,
+  "theme": "Nurture",
+  "topic": "Children + Youth",
+  "promise": "Leverage multi-family housing developments and new school expansions to bring additional childcare spaces to every neighbourhood.",
+  "outcome": "Have increased Childcare offering in the city. Have brought non-profit childcare as amenity in multiple new developments, Expanded zoning eligibility for smaller childcares in residential neighbourhoods. Continue to collaborate with SD40 on childcare in new school spaces.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 28,
+  "theme": "Nurture",
+  "topic": "Children + Youth",
+  "promise": "Increase evening youth programs by and for youth throughout the city. Give youth safe places to be and things to do in a youth-driven environment.",
+  "outcome": "Supported the Youth Hub, and are now seeking closer collaboration between Youth Hub and Youth centre programming in the City. More resources required to expand hours and programming.",
+  "status_label": "Some progress",
+  "status": "yellow"
+ },
+ {
+  "id": 29,
+  "theme": "Nurture",
+  "topic": "Children + Youth",
+  "promise": "Improve the registration process of recreation programming to increase accessibility and equity of participation.",
+  "outcome": "Have updated registration programs, and more work is coming. Every child in New Westminster now has space in swim lessons, have a low-income subsidy program for recreation, worked with school to pilot new swim lesson collaboration.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 30,
+  "theme": "Nurture",
+  "topic": "Children + Youth",
+  "promise": "Ensure families in higher density neighbourhoods have access to green spaces, and public spaces reflect changing and growing community needs.",
+  "outcome": "People Parks and Play plan speaks specifically to this - identifying underserved neighbourhoods for green space. We have included tools to acquire new space for pocket parks and for “greening” public spaces in the city, have purchased new land to expand green space, preserved Poplar Landing.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 31,
+  "theme": "Nurture",
+  "topic": "Health equity",
+  "promise": "Secure and improve access to affordable and nutrition food with focus on urban food systems.",
+  "outcome": "Supported community gardens expansions in the city, have actively supported local food security organizations (Dan's Legacy, Don't go Hungry)",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 32,
+  "theme": "Nurture",
+  "topic": "Health equity",
+  "promise": "Increase the number of accessible and conveniently located public washrooms and operational drinking water fountains City-wide",
+  "outcome": "New Public Toilet strategy, two new public toilets in capital works, better management of existing toilets and planned medium-term expansion of service to underserved parts of the community. Also expanded fountains and misting stations across City.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 33,
+  "theme": "Nurture",
+  "topic": "Health equity",
+  "promise": "Participate actively in mitigation of the opiate overdose crisis by supporting the work of non-profits and government funded services to ensure access to life saving harm reduction services and substance use treatments in New West.",
+  "outcome": "CRPP is operating and being evaluated for sustainability. Have supported Harm Reduction services, and expanded non-clinical outreach, supported second Responder program and better equipping First Responders at the front lines.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 34,
+  "theme": "Nurture",
+  "topic": "Health equity",
+  "promise": "Assure all services in the City work towards Universal Accessibility as a standard, and empower our many community partners in addressing systemic and physical barriers.",
+  "outcome": "Universal accessibility is a commitment in policy, is taking time to implement in operations.",
+  "status_label": "Some progress",
+  "status": "yellow"
+ },
+ {
+  "id": 35,
+  "theme": "Connect",
+  "topic": "Queensborough",
+  "promise": "Work with neighbouring communities of Hamilton and Annacis Island in creating an Integrated Plan that makes it easier for Queensborough residents to move around.",
+  "outcome": "Queensborough Transportation Plan approved after extensive consultation with community and better integration with transportation plans of adjacent communities in Delta and Richmond.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 36,
+  "theme": "Connect",
+  "topic": "Queensborough",
+  "promise": "Improve and increase the sidewalk space on residential streets to bring Queensborough up to the standard seen in the rest of the city.",
+  "outcome": "Have committed to major investment in both new road design and drainage management (Fenton Street) in collaboration and consultation with neighbourhood, have added now sidewalks and speed control measures and created funding model and longer-term plan. work in progress.",
+  "status_label": "Some progress",
+  "status": "yellow"
+ },
+ {
+  "id": 37,
+  "theme": "Connect",
+  "topic": "Queensborough",
+  "promise": "Work with TransLink to improve the bus service throughout Queensborough, and on queue jumping designs to reduce impact of rush hour traffic.",
+  "outcome": "Have brought service improvements to the 104 and 410, completed Burrard Peninsula Area Transport Plan (BP ATP) that outlines incoming improvements. Have integrated Buss Speed and Reliability program for Q'Boro routes, Translink is on board with design work.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 38,
+  "theme": "Connect",
+  "topic": "Queensborough",
+  "promise": "Complete the Queensborough perimeter trail to connect all neighbourhoods to the riverfront.",
+  "outcome": "Are still looking for opportunities to secure access to private lands. Included in Queensborough Transportation plan and now in the Parks Master Plan.",
+  "status_label": "Some progress",
+  "status": "yellow"
+ },
+ {
+  "id": 39,
+  "theme": "Connect",
+  "topic": "City Hall",
+  "promise": "Improve direct communication with Mayor and Council. Return to Brown Bag lunches and Community forums and public reporting back on feedback",
+  "outcome": "Have integrated new models for engagement, from the Booth to videos, took the “state of the City” on the road to free public presentations to seniors, youth, and general community. More work to do here.",
+  "status_label": "Some progress",
+  "status": "yellow"
+ },
+ {
+  "id": 40,
+  "theme": "Connect",
+  "topic": "City Hall",
+  "promise": "Commit to an efficient and responsive City Hall. Reduce permit times and complexity for homeowners and businesses, especially for small projects",
+  "outcome": "Have revamped Business Licensing to clarify and simplify, have developed concierge model of business support, are integrating better systems for digital permitting and reducing wait times.",
+  "status_label": "Some progress",
+  "status": "yellow"
+ },
+ {
+  "id": 41,
+  "theme": "Connect",
+  "topic": "City Hall",
+  "promise": "Continue to improve public engagement with a specific focus on reaching historically marginalized groups. Expand the Be Heard New West model to offline and face-to-face events reflecting a post-pandemic world.",
+  "outcome": "Be Heard New West has expanded options to connect to more people, Pop-ups and “meeting people where they are” is now a standard practice in community engagement, and the Community Advisory Assembly is breaking new grounds on inclusive community engagement and involvement.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 42,
+  "theme": "Connect",
+  "topic": "City Hall",
+  "promise": "Close the loop on public engagement with open reporting of engagement feedback and clear language responses.",
+  "outcome": "Be Heard New West is an open portal that actively reports out and “closes the loop” on engagement.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 43,
+  "theme": "Connect",
+  "topic": "Riverfront",
+  "promise": "Secure funding and partnerships to connect Pier Park to Sapperton Landing to Queensborough to realize the Riverfront Vision.",
+  "outcome": "This work is delayed by Pattullo Replacement, and by slow progress on relationship building with host Nations. Land acquisitions to support this have moved forward, as has partnership discussions with Metro Vancouver Parks.",
+  "status_label": "Some progress",
+  "status": "yellow"
+ },
+ {
+  "id": 44,
+  "theme": "Connect",
+  "topic": "Riverfront",
+  "promise": "While rebuilding and expanding Pier Park, engage with local First Nations on visioning the Riverfront as a place of sacred and historic prominence as the keystone to developing a renewed community vision.",
+  "outcome": "This work has been slowed by work on Pier Park West and by delays in creating relationship with host nations. Commitment to partnership with First Nations remains strong, relationship building work is ongoing.",
+  "status_label": "Some progress",
+  "status": "yellow"
+ },
+ {
+  "id": 45,
+  "theme": "Connect",
+  "topic": "Riverfront",
+  "promise": "Increase access to shade and weather protection along the Riverfront through a creation of covered outdoor spaces for both public gathering and passive use.",
+  "outcome": "New Pier Park expansion includes significant shade assets (some to come along as trees green in). Have also worked to secure access to indoor space for public gathering at FRDC",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 46,
+  "theme": "Connect",
+  "topic": "Riverfront",
+  "promise": "Find opportunities (Queensborough beach, Muni Evers Park, Cumberland Park) to connect people directly with the river. Find safe spaces for people to touch the water again.",
+  "outcome": "Still a work in progress, Muni Evers Park planning is upcoming, plans to improve Queensborough “beach” also upcoming.",
+  "status_label": "Fell short",
+  "status": "red"
+ },
+ {
+  "id": 47,
+  "theme": "Connect",
+  "topic": "Riverfront",
+  "promise": "Work with TransLink, the Province, and regional partners to proactively address regional congestion challenges with an emphasis on making it easier for New West residents to get around the community.",
+  "outcome": "Funded Active Transportation Network, continue to apply for and receive grants form Translink ($27 Million this term) for improvements, worked with province on integration of stalawasem Bridge.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 48,
+  "theme": "Connect",
+  "topic": "Transportation",
+  "promise": "Invest in making New West a place with the safest streets in the Lower Mainland for all travel modes with a Vision Zero approach",
+  "outcome": "Vision Zero Task Force just reported out, province -leading work in integrating road safety data",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 49,
+  "theme": "Connect",
+  "topic": "Transportation",
+  "promise": "Invest in a core mobility network for pedestrians and cyclists so everyone can safely and comfortable choose Active Transportation.",
+  "outcome": "Active Transportation Network Plan funding, year two initiatives underway, year three initiatives in public consultation.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 50,
+  "theme": "Connect",
+  "topic": "Transportation",
+  "promise": "Make transit more comfortable to use through better shelters, accessible stops, and transit priority lanes to bypass regional congestion.",
+  "outcome": "Have received $27 Million ins support funding from TransLink for shelters, bus speed and reliability, and improving walking and active transportation connections to transit.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 51,
+  "theme": "Connect",
+  "topic": "Transportation",
+  "promise": "Adopt a Universal Accessibility standard for transportation network, including improves accessible parking and wayfinding strategies.",
+  "outcome": "Definitely a work in progress. New standard not adopted.",
+  "status_label": "Fell short",
+  "status": "red"
+ },
+ {
+  "id": 52,
+  "theme": "Connect",
+  "topic": "Seniors",
+  "promise": "Expand Century House programming and support to include spaces in other community spaces in every neighbourhood.",
+  "outcome": "Both expanded hours at CH and expanded seniors programming in other facilities in the City",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 53,
+  "theme": "Connect",
+  "topic": "Seniors",
+  "promise": "Invest in programs such as Hey Neighbour to address increasing social isolation and to enhance community-supported emergency preparedness.",
+  "outcome": "Hey Neighbour operating, also received UW funding for expanded programming to connect isolated seniors with food and companionship.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 54,
+  "theme": "Connect",
+  "topic": "Seniors",
+  "promise": "Increase and improve public seating and outdoor 'cool' spaces throughout the city, including parks and parklets.",
+  "outcome": "Have a public seating program and funding in our capital budget as part of our transportation budget. Our expanded public cooling program is bringing more cool spaces across the City, emphasizing neighbourhoods with high seniors and vulnerable populations.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 55,
+  "theme": "Connect",
+  "topic": "Seniors",
+  "promise": "Adopt a Universal Accessibility-standard for public spaces and amenities. Proactively identify and remove barriers for the seniors population.",
+  "outcome": "Accessibility Advisory Committee working on this, have brought new accessibility standards to new buildings, but work to do to expand city-wide.",
+  "status_label": "Some progress",
+  "status": "yellow"
+ },
+ {
+  "id": 56,
+  "theme": "Connect",
+  "topic": "Seniors",
+  "promise": "Assure seniors programming includes culturally-appropriate content to assure a welcoming environment that represents the diversity of the community.",
+  "outcome": "Age Friendly City strategy, Expanded hours at Century House, expanded seniors programming City-wide.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 57,
+  "theme": "Connect",
+  "topic": "Safety",
+  "promise": "Work with BIAs, Resident Association, and non-profits to collectively identify safety concerns and empower the community to work with the city to mitigate concerns through evidence-based interventions.",
+  "outcome": "The CRPP was developed in collaboration with the Downtown BIA and RA, and uses partnership with service organizations as a foundation of its work.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 58,
+  "theme": "Connect",
+  "topic": "Safety",
+  "promise": "Take a proactive approach to ECcomm responsiveness failures with advocacy to properly fund and resource 911 services, and bring non-emergency call services in-house.",
+  "outcome": "Have lead work at ECOMM and though the reforms are slow, and costs continue to go up allowing us to shift non-emerge back to ECOMM",
+  "status_label": "Some progress",
+  "status": "yellow"
+ },
+ {
+  "id": 59,
+  "theme": "Connect",
+  "topic": "Safety",
+  "promise": "Partner with the CMHA to fully implement PACT in New West.",
+  "outcome": "PACT is now CRCL and operating.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ },
+ {
+  "id": 60,
+  "theme": "Connect",
+  "topic": "Safety",
+  "promise": "Support peer-informed on-the-street programs such as Community Action Team and I's on the Street.",
+  "outcome": "Both programs being supported by us, and working toward sustainable funding models in partnership.",
+  "status_label": "Completed / major progress",
+  "status": "green"
+ }
+]

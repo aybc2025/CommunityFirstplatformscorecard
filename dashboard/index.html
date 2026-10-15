@@ -1,0 +1,495 @@
+<style>
+.lx{position:relative;display:flex;flex-direction:column;gap:var(--cds-gap-lg);font-family:var(--font-anthropic-sans);color:var(--color-fg);max-width:72rem;margin-inline:auto;min-width:0;--lx-or:#E8731A;--lx-or-d:#C2560A;--lx-nv:#2E5C8A;--lx-or-t:color-mix(in srgb,var(--lx-or) 70%,var(--color-fg));--lx-nv-t:color-mix(in srgb,var(--lx-nv) 70%,var(--color-fg))}
+.lx-hero{background:color-mix(in srgb,var(--lx-or) 14%,var(--color-panel));border:1px solid color-mix(in srgb,var(--lx-or) 35%,var(--color-border-line));border-left:6px solid var(--lx-or);border-radius:var(--cds-radius);padding:var(--cds-pad-lg)}
+.lx-k-or{color:var(--lx-or-t);font-weight:var(--cds-font-weight-medium)}
+.lx-k-nv{color:var(--lx-nv-t);font-weight:var(--cds-font-weight-medium)}
+.lx-title{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);margin:0;line-height:1.2}
+.lx-take{margin:var(--cds-gap-sm) 0 0;font-size:var(--cds-font-size-body);line-height:1.5;font-variant-numeric:tabular-nums}
+.lx-note{margin:var(--cds-gap-xs) 0 0;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);line-height:1.5}
+.lx-card{background:var(--color-panel);border:1px solid var(--color-border-line);border-top:3px solid var(--lx-or);border-radius:var(--cds-radius);padding:var(--cds-pad-lg);display:flex;flex-direction:column;gap:var(--cds-gap-md);min-width:0}
+.lx-h{margin:0;font-size:var(--cds-font-size-heading);font-weight:var(--cds-font-weight-medium)}
+.lx-sub{margin:0;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);line-height:1.5}
+.lx-d-green{--c:var(--color-ok)}
+.lx-d-yellow{--c:var(--color-warn)}
+.lx-d-red{--c:var(--color-bad)}
+.lx-dot{display:inline-block;width:.6rem;height:.6rem;border-radius:50%;background:var(--c,var(--color-fg-muted));margin-right:.4rem;flex:none}
+.lx-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,9.5rem),1fr));gap:var(--cds-gap-md)}
+.lx-tile{font:inherit;color:inherit;text-align:left;cursor:pointer;background:transparent;border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-md);display:flex;flex-direction:column;gap:var(--cds-gap-xs);min-width:0}
+.lx-tile:hover{border-color:var(--color-fg-muted)}
+.lx-tile[aria-pressed=true]{outline:2px solid var(--lx-or);outline-offset:-1px}
+.lx-tl{display:flex;align-items:center;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.lx-big{font-family:var(--font-anthropic-serif);font-weight:400;font-size:calc(var(--cds-font-size-title) * 1.5);line-height:1.1;font-variant-numeric:tabular-nums}
+.lx-ts{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);font-variant-numeric:tabular-nums}
+.lx-statusbar{display:flex;gap:2px;height:.9rem;min-height:.9rem;border-radius:999px;overflow:hidden}
+.lx-sbseg{min-width:4px}
+.lx-chart{min-width:0;position:relative}
+#lx-topics{min-height:16rem}
+#lx-poll{min-height:16rem}
+.lx-legend{display:flex;flex-wrap:wrap;gap:var(--cds-gap-md);font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.lx-lg{display:inline-flex;align-items:center}
+.lx-sw{display:inline-block;width:.7rem;height:.7rem;border-radius:3px;margin-right:.4rem}
+.lx-hit{fill:transparent}
+.lx-row:hover .lx-hit{fill:var(--color-border-line);fill-opacity:.35}
+.lx-filters{display:flex;flex-wrap:wrap;gap:var(--cds-gap-sm);align-items:center}
+.lx-filters input,.lx-filters select{font:inherit;font-size:var(--cds-font-size-caption);color:var(--color-fg);background:var(--color-bg);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-xs) var(--cds-pad-sm);min-height:2rem;min-width:0}
+.lx-q{flex:1 1 14rem}
+.lx-chips{display:flex;flex-wrap:wrap;gap:var(--cds-gap-xs)}
+.lx-chip,.lx-clear{font:inherit;font-size:var(--cds-font-size-caption);color:var(--color-fg);background:transparent;border:1px solid var(--color-border-line);border-radius:999px;padding:var(--cds-pad-xs) var(--cds-pad-sm);cursor:pointer;min-height:2rem}
+.lx-chip[aria-pressed=true]{background:var(--lx-or-d);color:#fff;border-color:var(--lx-or-d)}
+.lx-clear[hidden]{display:none}
+.lx-tablewrap{container-type:inline-size;min-width:0}
+.lx-tablebox{max-height:40rem;min-height:6rem;overflow:auto;border:1px solid var(--color-border-line);border-radius:var(--cds-radius)}
+.lx-table{width:100%;border-collapse:collapse;font-size:var(--cds-font-size-caption);line-height:1.45}
+.lx-table th{position:sticky;top:0;z-index:1;background:var(--color-panel);text-align:left;font-weight:var(--cds-font-weight-medium);border-bottom:1px solid var(--color-border-line);padding:0}
+.lx-table th button{font:inherit;color:inherit;background:none;border:0;padding:var(--cds-pad-sm);cursor:pointer;width:100%;text-align:left}
+.lx-table th[aria-sort=ascending] button::after{content:" \25B2";font-size:.7em}
+.lx-table th[aria-sort=descending] button::after{content:" \25BC";font-size:.7em}
+.lx-table th[data-field=promise]{background:color-mix(in srgb,var(--lx-or) 16%,var(--color-panel));box-shadow:inset 0 3px 0 var(--lx-or);color:var(--lx-or-t)}
+.lx-table th[data-field=outcome]{background:color-mix(in srgb,var(--lx-nv) 16%,var(--color-panel));box-shadow:inset 0 3px 0 var(--lx-nv);color:var(--lx-nv-t)}
+.lx-table td{padding:var(--cds-pad-sm);vertical-align:top;border-bottom:1px solid var(--color-border-line)}
+.lx-table tbody tr:last-child td{border-bottom:0}
+.lx-c-id{width:2.5rem;color:var(--color-fg-muted);font-variant-numeric:tabular-nums}
+.lx-c-theme,.lx-c-topic{white-space:nowrap}
+.lx-c-promise{width:30%;background:color-mix(in srgb,var(--lx-or) 7%,var(--color-panel));box-shadow:inset 3px 0 0 var(--lx-or)}
+.lx-table td.lx-c-promise,.lx-table td.lx-c-outcome{padding-left:calc(var(--cds-pad-sm) + 5px)}
+.lx-c-outcome{width:34%;background:color-mix(in srgb,var(--lx-nv) 7%,var(--color-panel));box-shadow:inset 3px 0 0 var(--lx-nv)}
+.lx-c-status_label{min-width:8rem}
+.lx-st::before{content:"";display:inline-block;width:.55rem;height:.55rem;border-radius:50%;background:var(--c);margin-right:.4rem}
+.lx-st-green{--c:var(--color-ok)}
+.lx-st-yellow{--c:var(--color-warn)}
+.lx-st-red{--c:var(--color-bad)}
+.lx-empty{margin:0;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.lx-empty[hidden]{display:none}
+@container (max-width: 46rem){
+  .lx-tablebox{max-height:none;overflow:visible;border:0}
+  .lx-table thead{display:none}
+  .lx-table,.lx-table tbody{display:block}
+  .lx-table tr{display:flex;flex-wrap:wrap;column-gap:var(--cds-gap-sm);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-sm) var(--cds-pad-md);margin-bottom:var(--cds-gap-sm)}
+  .lx-table td{border:0;padding:var(--cds-pad-xs) 0;width:auto}
+  .lx-c-id{order:1}
+  .lx-c-id::before{content:"Goal "}
+  .lx-c-theme{order:2;font-weight:var(--cds-font-weight-medium)}
+  .lx-c-topic{order:3;font-weight:var(--cds-font-weight-medium)}
+  .lx-c-status_label{order:4;min-width:0;margin-left:auto}
+  .lx-c-promise{order:5;flex:1 1 100%;width:auto}
+  .lx-c-outcome{order:6;flex:1 1 100%;width:auto}
+  .lx-table td.lx-c-promise,.lx-table td.lx-c-outcome{box-sizing:border-box;padding:var(--cds-pad-sm) var(--cds-pad-md);margin-top:var(--cds-gap-xs);border-radius:6px}
+  .lx-c-promise::before,.lx-c-outcome::before{display:block;font-size:var(--cds-font-size-caption);font-weight:var(--cds-font-weight-medium)}
+  .lx-c-promise::before{color:var(--lx-or-t)}
+  .lx-c-outcome::before{color:var(--lx-nv-t)}
+  .lx-c-promise::before{content:"What we promised"}
+  .lx-c-outcome::before{content:"What we did"}
+}
+.lx-pq{display:flex;flex-direction:column;gap:var(--cds-gap-xs)}
+#lx-poll .lx-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:var(--cds-gap-lg);margin-top:var(--cds-gap-md)}
+.lx-pt{margin:0;font-size:var(--cds-font-size-caption);line-height:1.4}
+.lx-pr{display:flex;align-items:center;gap:var(--cds-gap-sm)}
+.lx-pl{flex:0 0 4.6rem;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.lx-track{position:relative;flex:1 1 auto;min-width:0;display:flex;height:1.5rem;background:var(--color-border-line);border-radius:4px;overflow:hidden}
+.lx-seg{height:100%;overflow:hidden;white-space:nowrap;padding-left:.4rem;box-sizing:border-box;line-height:1.5rem;font-size:var(--cds-font-size-caption);color:#fff;font-variant-numeric:tabular-nums}
+.lx-some{opacity:.4}
+.lx-tick{position:absolute;top:0;bottom:0;width:2px;background:var(--color-fg);margin-left:-1px}
+.lx-pv{flex:0 0 2.4rem;text-align:right;font-size:var(--cds-font-size-caption);font-variant-numeric:tabular-nums}
+.lx-prior{margin:0;padding-left:5.2rem;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);font-variant-numeric:tabular-nums}
+.lx-tip{position:absolute;z-index:5;pointer-events:none;white-space:pre-line;max-width:16rem;background:var(--cds-surface-popover);border:1px solid var(--cds-border);border-radius:var(--cds-radius);box-shadow:var(--cds-shadow-popover);padding:var(--cds-pad-xs) var(--cds-pad-sm);font-size:var(--cds-font-size-caption);line-height:1.4}
+.lx-tip[hidden]{display:none}
+.lx-fail{display:flex;align-items:center;justify-content:center;gap:.4rem;min-height:4rem;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.lx-fail i{width:.375rem;height:.375rem;border-radius:50%;background:var(--color-bad)}
+</style>
+
+<div class="lx">
+  <header class="lx-hero">
+    <h1 class="lx-title">Community First platform scorecard</h1>
+    <p class="lx-take"><span class="lx-m" data-source="status_counts" data-field="n" data-where="status=green" data-fmt="n">—</span> of <span class="lx-m" data-source="status_counts" data-field="n" data-where="status=total" data-fmt="n">—</span> platform goals were completed or saw major progress (<span class="lx-m" data-source="status_counts" data-field="share" data-where="status=green" data-fmt="pct">—</span>); <span class="lx-m" data-source="status_counts" data-field="n" data-where="status=yellow" data-fmt="n">—</span> saw some progress and <span class="lx-m" data-source="status_counts" data-field="n" data-where="status=red" data-fmt="n">—</span> fell short.</p>
+    <p class="lx-note">Source: Patrick Johnstone’s newsletter “P@J Newsletter – Election Time!” (Oct 14, 2026), section “Running on a record”. This is the campaign’s own assessment of its term. Statuses follow the green, yellow and red shading in the newsletter’s table and are consistent with the newsletter’s own tally.</p>
+  </header>
+
+  <section id="overview" class="lx-card">
+    <h2 class="lx-h">Where the promises ended up</h2>
+    <p class="lx-sub">Select a status to filter the goals table below.</p>
+    <div class="lx-tiles">
+      <button type="button" class="lx-tile" data-pick="" aria-pressed="false">
+        <span class="lx-tl">All goals</span>
+        <span class="lx-big lx-m" data-source="status_counts" data-field="n" data-where="status=total" data-fmt="n">—</span>
+        <span class="lx-ts">Across every theme and topic</span>
+      </button>
+      <button type="button" class="lx-tile lx-d-green" data-pick="green" aria-pressed="false">
+        <span class="lx-tl"><i class="lx-dot"></i>Completed / major progress</span>
+        <span class="lx-big lx-m" data-source="status_counts" data-field="n" data-where="status=green" data-fmt="n">—</span>
+        <span class="lx-ts"><span class="lx-m" data-source="status_counts" data-field="share" data-where="status=green" data-fmt="pct">—</span> of goals</span>
+      </button>
+      <button type="button" class="lx-tile lx-d-yellow" data-pick="yellow" aria-pressed="false">
+        <span class="lx-tl"><i class="lx-dot"></i>Some progress</span>
+        <span class="lx-big lx-m" data-source="status_counts" data-field="n" data-where="status=yellow" data-fmt="n">—</span>
+        <span class="lx-ts"><span class="lx-m" data-source="status_counts" data-field="share" data-where="status=yellow" data-fmt="pct">—</span> of goals</span>
+      </button>
+      <button type="button" class="lx-tile lx-d-red" data-pick="red" aria-pressed="false">
+        <span class="lx-tl"><i class="lx-dot"></i>Fell short</span>
+        <span class="lx-big lx-m" data-source="status_counts" data-field="n" data-where="status=red" data-fmt="n">—</span>
+        <span class="lx-ts"><span class="lx-m" data-source="status_counts" data-field="share" data-where="status=red" data-fmt="pct">—</span> of goals</span>
+      </button>
+    </div>
+    <div id="lx-sb" class="lx-statusbar dash-skeleton" data-source="status_counts" aria-hidden="true"></div>
+  </section>
+
+  <section id="by-topic" class="lx-card">
+    <h2 class="lx-h">Progress by topic</h2>
+    <p class="lx-sub">Number of goals per topic, by status. Select a topic or theme to filter the table below.</p>
+    <div id="lx-topics" class="lx-chart dash-skeleton" data-source="topic_status"></div>
+    <div class="lx-legend">
+      <span class="lx-lg lx-d-green"><i class="lx-dot"></i>Completed / major progress</span>
+      <span class="lx-lg lx-d-yellow"><i class="lx-dot"></i>Some progress</span>
+      <span class="lx-lg lx-d-red"><i class="lx-dot"></i>Fell short</span>
+    </div>
+  </section>
+
+  <section id="goals" class="lx-card">
+    <h2 class="lx-h">All platform goals</h2>
+    <p class="lx-sub"><span class="lx-k-or">Orange</span> is what was promised and <span class="lx-k-nv">blue</span> is what was done. The status dot follows the newsletter’s green, yellow and red shading. Click a column heading to sort.</p>
+    <div class="lx-filters">
+      <input class="lx-q" type="search" placeholder="Search promises and results" aria-label="Search goals">
+      <select class="lx-theme" aria-label="Theme"></select>
+      <select class="lx-topic" aria-label="Topic"></select>
+      <div class="lx-chips" role="group" aria-label="Status">
+        <button type="button" class="lx-chip" data-pick="" aria-pressed="true">All</button>
+        <button type="button" class="lx-chip" data-pick="green" aria-pressed="false">Completed / major</button>
+        <button type="button" class="lx-chip" data-pick="yellow" aria-pressed="false">Some progress</button>
+        <button type="button" class="lx-chip" data-pick="red" aria-pressed="false">Fell short</button>
+      </div>
+      <button type="button" class="lx-clear" hidden>Clear filters</button>
+    </div>
+    <div class="lx-tablewrap">
+      <div class="lx-tablebox">
+        <table class="lx-table" data-source="goals" data-row-key="id">
+          <thead>
+            <tr>
+              <th data-field="id"><button type="button" data-sort="id">#</button></th>
+              <th data-field="theme"><button type="button" data-sort="theme">Theme</button></th>
+              <th data-field="topic"><button type="button" data-sort="topic">Topic</button></th>
+              <th data-field="promise"><button type="button" data-sort="promise">What we promised</button></th>
+              <th data-field="outcome"><button type="button" data-sort="outcome">What we did</button></th>
+              <th data-field="status_label"><button type="button" data-sort="status_label">Status</button></th>
+            </tr>
+          </thead>
+          <tbody id="lx-body"></tbody>
+        </table>
+      </div>
+    </div>
+    <p class="lx-empty" hidden>No goals match these filters.</p>
+  </section>
+
+  <section id="poll" class="lx-card">
+    <h2 class="lx-h">Performance on Council Strategic Priorities</h2>
+    <p class="lx-sub">The city’s official community poll, as pictured in the newsletter. Bar length is total agree and the darker part is strongly agree. A ▲ and a tick mark the earlier result shown in brackets on the original chart.</p>
+    <div id="lx-poll" class="lx-chart dash-skeleton" data-source="poll"></div>
+  </section>
+
+  <div class="lx-tip" hidden></div>
+</div>
+
+<script>
+const FMT = {n: d3.format(','), pct: d3.format('.1%')};
+const STATUS = [
+  {key: 'green', label: 'Completed / major progress', color: 'var(--color-ok)'},
+  {key: 'yellow', label: 'Some progress', color: 'var(--color-warn)'},
+  {key: 'red', label: 'Fell short', color: 'var(--color-bad)'},
+];
+const RANK = {green: 0, yellow: 1, red: 2};
+const COLS = ['id', 'theme', 'topic', 'promise', 'outcome', 'status_label'];
+let sortF = 'id';
+let sortDir = 1;
+
+const root = document.querySelector('.lx');
+const tip = root.querySelector('.lx-tip');
+const qIn = root.querySelector('.lx-q');
+const el = (tag, cls) => {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  return e;
+};
+
+dash.calc('status_counts', {
+  inputs: ['goals'],
+  title: 'Goals by status',
+  description: 'How many platform goals have each status, and each status’s share of all goals.',
+  fn: (goals) => {
+    const order = [['total', 'All goals'], ['green', 'Completed / major progress'], ['yellow', 'Some progress'], ['red', 'Fell short']];
+    const n = goals.length;
+    return order.map(([status, label]) => {
+      const c = status === 'total' ? n : goals.filter((g) => g.status === status).length;
+      return {status, label, n: c, share: n ? c / n : 0};
+    });
+  },
+});
+
+dash.calc('topic_status', {
+  inputs: ['goals'],
+  title: 'Goals by topic and status',
+  description: 'For each topic within its theme, how many goals have each status.',
+  fn: (goals) => {
+    const out = [];
+    const idx = {};
+    goals.forEach((g) => {
+      if (!(g.topic in idx)) {
+        idx[g.topic] = out.length;
+        out.push({topic: g.topic, theme: g.theme, green: 0, yellow: 0, red: 0, total: 0});
+      }
+      const r = out[idx[g.topic]];
+      r[g.status] += 1;
+      r.total += 1;
+    });
+    return out;
+  },
+});
+
+function gate(box, id) {
+  const d = dash.data(id);
+  box.classList.toggle('dash-skeleton', d.status === 'loading');
+  if (d.status === 'ok') return d.data;
+  box.replaceChildren();
+  if (d.status !== 'loading') {
+    const f = el('div', 'lx-fail');
+    f.append(el('i'), 'Failed to load');
+    box.append(f);
+  }
+  return null;
+}
+
+function fillMarks() {
+  document.querySelectorAll('.lx-m').forEach((m) => {
+    const d = dash.data(m.dataset.source);
+    const w = new URLSearchParams(m.dataset.where);
+    const row = d.status === 'ok' ? d.data.find((r) => [...w].every(([k, v]) => String(r[k]) === v)) : null;
+    const v = row ? row[m.dataset.field] : null;
+    m.textContent = v == null ? '—' : (FMT[m.dataset.fmt] || String)(v);
+  });
+}
+
+function drawStatusBar() {
+  const box = document.getElementById('lx-sb');
+  const rows = gate(box, 'status_counts');
+  if (!rows) return;
+  box.replaceChildren(...STATUS.map((s) => {
+    const r = rows.find((x) => x.status === s.key);
+    const seg = el('span', 'lx-sbseg');
+    seg.style.flex = (r ? r.n : 0) + ' 1 0';
+    seg.style.background = s.color;
+    if (r) seg.setAttribute('data-tip', s.label + ': ' + FMT.n(r.n) + ' (' + FMT.pct(r.share) + ')');
+    return seg;
+  }));
+}
+
+function drawTopics() {
+  const box = document.getElementById('lx-topics');
+  const rows = gate(box, 'topic_status');
+  if (!rows) return;
+  const p = dash.params();
+  const W = Math.max(box.clientWidth, 260);
+  const rowH = 28;
+  const headH = 26;
+  const themes = [];
+  rows.forEach((r) => { if (!themes.includes(r.theme)) themes.push(r.theme); });
+  const H = 2 + themes.length * headH + rows.length * rowH;
+  box.replaceChildren();
+  const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', '0 0 ' + W + ' ' + H)
+    .attr('role', 'img').attr('aria-label', 'Stacked bars of goals by status for each topic');
+  const meas = svg.append('text').style('font-size', 'var(--cds-font-size-caption)');
+  let lw = 0;
+  rows.forEach((r) => { meas.text(r.topic); lw = Math.max(lw, meas.node().getComputedTextLength()); });
+  meas.remove();
+  const left = Math.min(Math.ceil(lw) + 18, W * 0.55);
+  const right = 30;
+  const x = d3.scaleLinear([0, d3.max(rows, (r) => r.total)], [0, Math.max(W - left - right, 40)]);
+  const dim = (r) => (p.topic && r.topic !== p.topic) || (p.theme && r.theme !== p.theme);
+  let y = 2;
+  themes.forEach((t) => {
+    const hg = svg.append('g').attr('class', 'lx-row').style('cursor', 'pointer').style('opacity', p.theme && p.theme !== t ? 0.4 : 1);
+    hg.append('rect').attr('class', 'lx-hit').attr('x', 0).attr('y', y).attr('width', W).attr('height', headH);
+    hg.append('text').attr('x', 0).attr('y', y + headH - 8).text(t)
+      .style('fill', 'var(--lx-or-t)').style('font-size', 'var(--cds-font-size-caption)').style('font-weight', 'var(--cds-font-weight-medium)');
+    hg.on('click', () => dash.setParams({theme: t, topic: null}));
+    y += headH;
+    rows.filter((r) => r.theme === t).forEach((r) => {
+      const tipLines = [r.topic].concat(STATUS.filter((s) => r[s.key] > 0).map((s) => s.label + ': ' + FMT.n(r[s.key])));
+      const g = svg.append('g').attr('class', 'lx-row').style('cursor', 'pointer').style('opacity', dim(r) ? 0.4 : 1)
+        .attr('data-tip', tipLines.join('\n'));
+      g.append('rect').attr('class', 'lx-hit').attr('x', 0).attr('y', y).attr('width', W).attr('height', rowH);
+      g.append('text').attr('x', 8).attr('y', y + rowH / 2 + 4).text(r.topic)
+        .style('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)');
+      let cum = 0;
+      STATUS.forEach((s) => {
+        const n = r[s.key];
+        if (!n) return;
+        const w = x(cum + n) - x(cum);
+        g.append('rect').attr('x', left + x(cum)).attr('y', y + 4).attr('width', Math.max(w - 2, 1)).attr('height', rowH - 8)
+          .attr('rx', 4).style('fill', s.color);
+        if (w >= 20) {
+          g.append('text').attr('x', left + x(cum) + (w - 2) / 2).attr('y', y + rowH / 2 + 4).attr('text-anchor', 'middle')
+            .text(FMT.n(n)).style('fill', 'var(--color-bg)').style('font-size', 'var(--cds-font-size-caption)');
+        }
+        cum += n;
+      });
+      g.append('text').attr('x', left + x(r.total) + 6).attr('y', y + rowH / 2 + 4).text(FMT.n(r.total))
+        .style('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)');
+      g.on('click', () => dash.setParams({theme: r.theme, topic: r.topic}));
+      y += rowH;
+    });
+  });
+}
+
+function syncControls(goals) {
+  const p = dash.params();
+  const th = root.querySelector('.lx-theme');
+  const tp = root.querySelector('.lx-topic');
+  const themes = [...new Set(goals.map((g) => g.theme))];
+  th.replaceChildren(new Option('All themes', ''), ...themes.map((t) => new Option(t, t)));
+  th.value = p.theme || '';
+  const topics = [...new Set(goals.filter((g) => !p.theme || g.theme === p.theme).map((g) => g.topic))];
+  tp.replaceChildren(new Option('All topics', ''), ...topics.map((t) => new Option(t, t)));
+  tp.value = p.topic || '';
+  if (document.activeElement !== qIn) qIn.value = p.q ? String(p.q) : '';
+}
+
+function drawTable() {
+  const g = dash.data('goals');
+  const body = document.getElementById('lx-body');
+  const empty = root.querySelector('.lx-empty');
+  root.querySelectorAll('.lx-table th').forEach((th) => {
+    th.setAttribute('aria-sort', th.dataset.field === sortF ? (sortDir > 0 ? 'ascending' : 'descending') : 'none');
+  });
+  if (g.status !== 'ok') {
+    body.replaceChildren();
+    empty.hidden = true;
+    return;
+  }
+  syncControls(g.data);
+  const p = dash.params();
+  const q = (p.q ? String(p.q) : '').trim().toLowerCase();
+  const rows = g.data.filter((r) =>
+    (!p.theme || r.theme === p.theme) && (!p.topic || r.topic === p.topic) && (!p.status || r.status === p.status) &&
+    (!q || [r.theme, r.topic, r.promise, r.outcome, r.status_label].join(' ').toLowerCase().includes(q)));
+  rows.sort((a, b) => {
+    let c;
+    if (sortF === 'id') c = a.id - b.id;
+    else if (sortF === 'status_label') c = RANK[a.status] - RANK[b.status];
+    else c = String(a[sortF]).localeCompare(String(b[sortF]));
+    return (c || a.id - b.id) * sortDir;
+  });
+  body.replaceChildren(...rows.map((r) => {
+    const tr = el('tr');
+    COLS.forEach((c) => {
+      const td = el('td', 'lx-c-' + c);
+      td.textContent = String(r[c]);
+      if (c === 'status_label') td.classList.add('lx-st', 'lx-st-' + r.status);
+      tr.append(td);
+    });
+    return tr;
+  }));
+  empty.hidden = rows.length > 0;
+}
+
+function drawPoll() {
+  const box = document.getElementById('lx-poll');
+  const rows = gate(box, 'poll');
+  if (!rows) return;
+  const legend = el('div', 'lx-legend');
+  [['Residents', 'var(--lx-or-d)'], ['Businesses', 'var(--lx-nv)']].forEach(([name, c]) => {
+    const it = el('span', 'lx-lg');
+    const sw = el('i', 'lx-sw');
+    sw.style.background = c;
+    it.append(sw, name);
+    legend.append(it);
+  });
+  const list = el('div', 'lx-list');
+  rows.forEach((r) => {
+    const q = el('div', 'lx-pq');
+    const title = el('p', 'lx-pt');
+    title.textContent = r.priority;
+    q.append(title);
+    [
+      ['Residents', r.residents_total, r.residents_strong, r.residents_prior, 'var(--lx-or-d)'],
+      ['Businesses', r.business_total, r.business_strong, null, 'var(--lx-nv)'],
+    ].forEach(([who, total, strong, prior, c]) => {
+      const row = el('div', 'lx-pr');
+      row.setAttribute('data-tip', who + '\n' + total + '% agree\n' + strong + '% strongly agree' + (prior != null ? '\nPrior result: ' + prior + '%' : ''));
+      const lab = el('span', 'lx-pl');
+      lab.textContent = who;
+      const track = el('div', 'lx-track');
+      const s1 = el('div', 'lx-seg');
+      s1.style.width = strong + '%';
+      s1.style.background = c;
+      s1.textContent = strong + '%';
+      const s2 = el('div', 'lx-seg lx-some');
+      s2.style.width = (total - strong) + '%';
+      s2.style.background = c;
+      track.append(s1, s2);
+      if (prior != null) {
+        const tk = el('i', 'lx-tick');
+        tk.style.left = prior + '%';
+        track.append(tk);
+      }
+      const val = el('span', 'lx-pv');
+      val.textContent = total + '%';
+      row.append(lab, track, val);
+      q.append(row);
+      if (prior != null) {
+        const pr = el('p', 'lx-prior');
+        pr.textContent = '▲ prior result ' + prior + '%';
+        q.append(pr);
+      }
+    });
+    list.append(q);
+  });
+  box.replaceChildren(legend, list);
+}
+
+function syncPressed() {
+  const cur = dash.params().status || '';
+  root.querySelectorAll('.lx-tile').forEach((t) => t.setAttribute('aria-pressed', String(cur !== '' && t.dataset.pick === cur)));
+  root.querySelectorAll('.lx-chip').forEach((c) => c.setAttribute('aria-pressed', String(c.dataset.pick === cur)));
+  const p = dash.params();
+  root.querySelector('.lx-clear').hidden = !(p.q || p.theme || p.topic || p.status);
+}
+
+root.addEventListener('click', (e) => {
+  const b = e.target.closest('[data-pick]');
+  if (b) {
+    const v = b.dataset.pick || null;
+    const cur = dash.params().status || null;
+    dash.setParams({status: b.classList.contains('lx-tile') && cur === v ? null : v});
+    return;
+  }
+  if (e.target.closest('.lx-clear')) dash.setParams({q: null, theme: null, topic: null, status: null});
+});
+qIn.addEventListener('input', () => dash.setParams({q: qIn.value.replace(/\s+/g, ' ').trim() || null}));
+root.querySelector('.lx-theme').addEventListener('change', (e) => dash.setParams({theme: e.target.value || null, topic: null}));
+root.querySelector('.lx-topic').addEventListener('change', (e) => dash.setParams({topic: e.target.value || null}));
+root.querySelector('.lx-table thead').addEventListener('click', (e) => {
+  const b = e.target.closest('button[data-sort]');
+  if (!b) return;
+  if (sortF === b.dataset.sort) sortDir = -sortDir;
+  else { sortF = b.dataset.sort; sortDir = 1; }
+  drawTable();
+});
+
+root.addEventListener('mousemove', (e) => {
+  const t = e.target.closest('[data-tip]');
+  if (!t) { tip.hidden = true; return; }
+  tip.textContent = t.getAttribute('data-tip');
+  tip.hidden = false;
+  const rb = root.getBoundingClientRect();
+  const x = Math.max(0, Math.min(e.clientX - rb.left + 12, rb.width - tip.offsetWidth));
+  tip.style.left = x + 'px';
+  tip.style.top = (e.clientY - rb.top + 16) + 'px';
+});
+root.addEventListener('mouseleave', () => { tip.hidden = true; });
+
+dash.onData(() => {
+  fillMarks();
+  drawStatusBar();
+  drawTopics();
+  drawTable();
+  drawPoll();
+  syncPressed();
+});
+</script>
